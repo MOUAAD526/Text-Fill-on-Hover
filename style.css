@@ -1,0 +1,45 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container{
+    background: linear-gradient(45deg, rgba(54, 54, 255, 0.747), rgba(0, 70, 128, 0.616), rgba(136, 17, 248, 0.562));
+/* height: 500px; */
+
+  height: 100vh;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h1{
+font-size: 85px;
+font-weight: bold;
+/* -webkit-text-fill-color: white; */
+
+-webkit-text-stroke: 1px rgb(179, 209, 253);
+font-family: 'Dela Gothic One', cursive;
+cursor: pointer;
+overflow: hidden;
+width: fit-content;
+position: relative;
+
+
+}
+h1::before{
+content:attr(data-text);
+/* -webkit-text-fill-color:rgba(91, 52, 143, 0.925); */
+color: red;
+position: absolute;
+left: 0;
+    top: 0;
+    width: 0;
+    overflow: hidden;
+    transition: all 1s linear;
+}
+h1:hover::before{
+     width: 100%;
+ 
+}
